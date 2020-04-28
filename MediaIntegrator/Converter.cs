@@ -136,7 +136,7 @@ namespace MediaIntegrator
         }
 
         /// <summary>
-        /// Code inspired from http://getcodesnippet.com/2014/05/15/how-to-convert-csv-file-to-xml-file-in-c/
+        /// Method that iterates over each csv-file
         /// </summary>
         /// <param name="xElement"></param>
         /// <param name="lines"></param>
@@ -166,7 +166,6 @@ namespace MediaIntegrator
         private static void AddProductSpecificData(XContainer xElement, IReadOnlyList<string> columns,
             CsvProductTypes retrieveProductTypeFromName)
         {
-            //var children = xElement.Elements("Type").Where()
             var specificProduct = xElement
                 .Elements("Item").SingleOrDefault(x => x.Element("ProductID")?.Value == columns[(int) CsvProductItems.Id]);
             switch (retrieveProductTypeFromName)
@@ -191,6 +190,7 @@ namespace MediaIntegrator
         
         /// <summary>
         /// Add generic product data to an xml file
+        /// Code inspired from http://getcodesnippet.com/2014/05/15/how-to-convert-csv-file-to-xml-file-in-c/
         /// </summary>
         /// <param name="xElement"></param>
         /// <param name="columns"></param>

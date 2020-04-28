@@ -38,12 +38,12 @@
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Simple CSV to XML converter" FontFamily="Segoe UI"
                    Margin="0,0,0,10" Grid.ColumnSpan="3" />
         
-        <TextBlock Grid.Column="1" Grid.Row="2" Text="1. Select the source folder for the CSV file" Grid.ColumnSpan="3"  />
-        <TextBox x:Name="CsvPathText" Grid.Column="1" Grid.Row="3" Width="300" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="1. Select the source folder of the CSV files" Grid.ColumnSpan="3"  />
+        <TextBox x:Name="CsvPathText" Grid.Column="1" Grid.Row="3" Width="300" Grid.ColumnSpan="2" IsReadOnly="True"/>
         
         <TextBlock Grid.Column="1" Grid.Row="4" Text="2. Select the destination folder for the XML file"
                    Grid.ColumnSpan="3" />
-        <TextBox x:Name="XmlPathText" Grid.Column="1" Grid.Row="5" Width="300" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="XmlPathText" Grid.Column="1" Grid.Row="5" Width="300" Grid.ColumnSpan="2" IsReadOnly="True"/>
         
         <Button x:Name="StartConverterButton" Grid.Column="1" Grid.Row="6" Content="Start" Margin="0,10,10,0"
                 Click="StartStopConverterButtons_OnClick" />

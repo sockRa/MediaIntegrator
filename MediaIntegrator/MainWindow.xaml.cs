@@ -31,9 +31,9 @@ namespace MediaIntegrator
             InitializeComponent();
             
             // Debug
-            Converter.CsvDirectoryPath =
-                $"E:\\Projekt\\C#\\Distanskurs\\Laboration 3\\StoreSimulator\\StoreSimulator\\bin\\Debug\\Database";
-            Converter.XmlDirectoryPath = $"C:\\Users\\manni\\Desktop";
+            //Converter.CsvDirectoryPath =
+                //$"E:\\Projekt\\C#\\Distanskurs\\Laboration 3\\StoreSimulator\\StoreSimulator\\bin\\Debug\\Database";
+            //Converter.XmlDirectoryPath = $"C:\\Users\\manni\\Desktop";
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace MediaIntegrator
             }
         }
 
-        private bool ValidateInput()
+        private static bool ValidateInput()
         {
             if (PathsHaveBeenSelected()) return true;
             
@@ -96,7 +96,7 @@ namespace MediaIntegrator
 
         }
 
-        private bool PathsHaveBeenSelected()
+        private static bool PathsHaveBeenSelected()
         {
             return Converter.CsvDirectoryPath != null && Converter.XmlDirectoryPath != null;
         }
