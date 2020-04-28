@@ -1,6 +1,4 @@
-﻿using System;
-using System.Resources;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 using Button = System.Windows.Controls.Button;
@@ -33,9 +31,9 @@ namespace MediaIntegrator
             InitializeComponent();
             
             // Debug
-            Converter.CsvPath =
+            Converter.CsvDirectoryPath =
                 $"E:\\Projekt\\C#\\Distanskurs\\Laboration 3\\StoreSimulator\\StoreSimulator\\bin\\Debug\\Database";
-            Converter.XmlPath = $"C:\\Users\\manni\\Desktop";
+            Converter.XmlDirectoryPath = $"C:\\Users\\manni\\Desktop";
         }
         
         /// <summary>
@@ -54,12 +52,12 @@ namespace MediaIntegrator
             switch (button.Name)
             {
                 case nameof(Buttons.CsvBrowseButton):
-                    Converter.CsvPath = browserDialog.SelectedPath;
-                    CsvPathText.Text = Converter.CsvPath;
+                    Converter.CsvDirectoryPath = browserDialog.SelectedPath;
+                    CsvPathText.Text = Converter.CsvDirectoryPath;
                     break;
                 case nameof(Buttons.XmlBrowseButton):
-                    Converter.XmlPath = browserDialog.SelectedPath;
-                    XmlPathText.Text = Converter.XmlPath;
+                    Converter.XmlDirectoryPath = browserDialog.SelectedPath;
+                    XmlPathText.Text = Converter.XmlDirectoryPath;
                     break;
             }
         }
@@ -100,7 +98,7 @@ namespace MediaIntegrator
 
         private bool PathsHaveBeenSelected()
         {
-            return Converter.CsvPath != null && Converter.XmlPath != null;
+            return Converter.CsvDirectoryPath != null && Converter.XmlDirectoryPath != null;
         }
         
         private void UpdateConverterStatus(ConverterStatus state)
